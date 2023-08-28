@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class test</h1>
+    <script>
+        var aptech={
+            "batchcode":["2302c1","2302c2","2302c3","2302c4","2302c5"],
+            "facuty_details":{"name":"asra","tyming":"4-6","year":4}
+        }
+        document.write("<h1>batch code</h1>")
+        for(var i=0;i<aptech.batchcode.length;i++)
+        document.write(aptech.batchcode[i]+"<br>")
+
+         document.write("<h1>faculty details</h1>")
+         for(key in aptech.faculty_details)
+{
+         document.write(key+':');
+
+    document.write(aptech.faculty_details[key]+'</br>');
+}
+    </script>
+</body>
+</html>

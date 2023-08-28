@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="head">
+        <h3 class="b">Board of Intermediate Education karachi</h3>
+        <header>GENERATE YOUR MARKSHEET</header>
+    </div>
+    <br><br>
+    <div class="main">'
+        <form>
+             
+            <div style="margin-left: 15%;">
+                <input style="margin:0;"type="text"Placeholder="Enter student name..." id="Sname">
+                <input style="margin:1%;"type="text"Placeholder="Enter Father name..." id="Fname">
+                <input style="margin:0;"type="text"Placeholder="Enter Roll number..." id="Rollno">
+                <input style="margin:1%;"type="text"Placeholder="Enter college name..." id="class">
+            </div>
+            <input type="number" placeholder="Enter urdu marks..."id="urdu">
+            <input type="number" placeholder="Enter math marks..."id="math">
+            <input type="number" placeholder="Enter english marks..."id="english">
+            <input type="number" placeholder="Enter chemistry marks..."id="chemistry">
+            <input type="number" placeholder="Enter physics marks..."id="physics">
+            <input type="number" placeholder="Enter pakistan st. marks..."id="pst">
+
+            <button type="button" onclick="grading()"> Generate Marksheet</button><br><br>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function grading() {
+        let Sname = queryselector("#Sname").value;
+        let Fname = queryselector("#Fname").value;
+        let Rolln = queryselector("#Rollno").value;
+        let clas = queryselector("#class").value;
+        let English = queryselector("#English").value;
+        let Chemistry = queryselector("#Chemistry").value;
+        let Physic = queryselector("#Physic").value;
+        let Math = queryselector("#Math").value;
+        let Urdu = queryselector("#Urdu").value;
+        let pst = queryselector("#pst").value;
+        let Total = +English + +Chemistry + +physic + +Math + +urdu + +pst;
+        let percentage = Total / 300 * 100;
+        let grade;
+
+        if (percentage >=80) {
+            grade = "A-1";
+        }
+        else if (percentage >=69) {
+            grade = "A";
+        }
+       else if (percentage >=59) {
+            grade = "B";
+        }
+       else if (percentage >=49) {
+            grade = "C";
+        }
+        else  {
+            grade = "fail";
+        }
+    }
+</script>
